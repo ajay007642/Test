@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #lbll label {
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <select name="fontsize" id="size">
+        <option id="size6">8</option>
+        <option id="size8">12</option>
+        <option id="size9">14</option>
+        <option id="size10">16</option>
+        <option id="size11">50</option>
+    </select>
+
+    <label id="lbll">
+        <label>Label1</label>
+        <label>Label2</label>
+        <label>Label3</label>
+        <label>Label4</label>
+        <label>Label5</label>
+        <label>Label6</label>
+        <label>Label7</label>
+        <label>Label8</label>
+        <label>Label9</label>
+        <label>Label10</label>
+        
+    </label>
+
+    <button id="box">Click Me</button>
+    <script>
+        $("#size").on('change', function () {
+            $("#lbll").css("font-size", this.value + "px");
+        });
+
+        $(document).ready(function () {
+            $('#box').click(function(){
+                $('#lbll').css('color', 'red');
+            });
+        });
+    </script>
+</body>
+
+</html>
